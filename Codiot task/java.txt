@@ -1,0 +1,148 @@
+TECNICAL TASK
+
+JAVA QUESTIONS
+
+4. REMOVE THE DUPLICATE
+
+public class RemoveDuplicates {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<>();
+    numbers.add(1);
+    numbers.add(2);
+    numbers.add(3);
+    numbers.add(2);
+    numbers.add(4);
+    numbers.add(1);
+
+    System.out.println("Original ArrayList: " + numbers);
+
+    HashSet<Integer> set = new HashSet<>(numbers);
+
+    numbers.clear();
+    numbers.addAll(set);
+
+    System.out.println("ArrayList with duplicates removed: " + numbers);
+  }
+}
+
+
+
+6.LOOP DECLARATION
+
+ while(true){
+   
+}
+
+for( ; ; ){
+  
+}
+
+
+
+14.REMOVE SPECIAL CHARACTER
+
+String str = "Hello, #world! How are you?";
+str = str.replaceAll("[#,!,?]", "");
+System.out.println(str);
+
+
+
+
+12. OUT PUT 
+*
+**
+***
+****
+*****
+
+public class StarPattern {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 6; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+36.FIBONACCI SERIES
+
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n, t1 = 0, t2 = 1;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of terms: ");
+        n = scanner.nextInt();
+        System.out.print("Fibonacci Series: ");
+        for (int i = 1; i <= n; ++i) {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+
+26.PRINT THE  OUTPUT  * 1 * 12 * 123 * 1234 * 12345 * 123456 * 1234567
+
+public class PrintPattern {
+    public static void main(String[] args) {
+        int rows = 7;
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            for (int k = i + 1; k <= rows; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+65.ADD THE ODD & EVEN NUMBER
+
+import java.util.Scanner;
+
+public class OddEven {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        
+        if (number % 2 == 0) {
+            System.out.println(number + " is even.");
+        } else {
+            System.out.println(number + " is odd.");
+        }
+    }
+}
+
+
+
+74.DATE AND TIME IN JAVA
+
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class DateTimePrinter {
+    public static void main(String[] args) {
+        
+        Date currentDate = new Date();
+
+       
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        
+        String formattedDate = dateFormat.format(currentDate);
+
+        
+        System.out.println("Current date and time: " + formattedDate);
+    }
+}

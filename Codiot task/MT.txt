@@ -1,0 +1,175 @@
+MT TASK
+
+
+5.Bug Report: Profile picture not updated in WhatsApp
+
+Summary:
+I encountered a bug where the profile picture was not getting updated in WhatsApp. Despite uploading a new picture and saving the changes, the old profile picture was still being displayed.
+
+Steps to Reproduce:
+
+Open WhatsApp on the mobile device.
+Navigate to the user profile section by tapping on the three-dot icon in the top right corner and selecting "Settings" from the drop-down menu.
+Tap on the "Profile" option from the settings page.
+Tap on the "Edit" icon next to the profile picture.
+Choose a new picture from the gallery and tap on "Save" to update the profile picture.
+Exit the app and reopen it to check if the profile picture has been updated.
+
+Expected Results:
+The profile picture should be updated with the new image.
+
+Actual Results:
+The old profile picture is still being displayed even after updating it with a new picture.
+
+Observations:
+
+I repeated the above steps multiple times with different pictures, but the profile picture was not getting updated.
+I also checked the internet connection to ensure that it was not a network issue.
+Other changes, such as updating the user's status, were getting updated successfully.
+Environment:
+
+Device: Samsung Galaxy S20
+Operating System: Android 11
+WhatsApp version: 2.22.6
+
+Severity:
+This bug can cause inconvenience to users who wish to update their profile pictures.
+
+
+Recommendations:
+
+Developers should investigate and fix the bug as soon as possible.
+A confirmation message should be displayed to the user after updating the profile picture.
+Users should be notified if there is an issue with updating the profile picture.
+Please let me know if any further information is required to resolve this issue
+
+
+
+6.AMAZON BUG REPORT
+
+
+Description:
+When attempting to add Electronic items to the cart on the Amazon website, users are unable to do so. After clicking the "Add to Cart" button, the page appears to refresh, but the item is not added to the cart. This issue is occurring consistently across multiple browsers and devices.
+
+Steps to Reproduce:
+
+Go to the Amazon website
+Navigate to the Electronic category
+Select an Electronic item
+Click the "Add to Cart" button
+Observe that the page refreshes, but the item is not added to the cart,
+
+Expected Result:
+The Electronic item should be added to the cart after clicking the "Add to Cart" button.
+
+Actual Result:
+The Electronic item is not added to the cart after clicking the "Add to Cart" button.
+
+Severity:
+High - This issue is preventing users from purchasing Electronic items from the Amazon website, which could result in lost revenue for the company.
+
+Environment:
+Amazon website
+
+Browsers: Google Chrome, Mozilla Firefox, Apple Safari
+Devices: Desktop computers and mobile devices
+
+
+Notes:
+This bug is reproducible consistently across multiple browsers and devices. It is recommended that the development team investigate and resolve this issue as soon as possible to avoid any potential loss of revenue.
+
+
+
+
+7.NEGATIVE TEST CASES
+
+Negative Test Case for Login Page: 
+                 Enter incorrect username and password. If user is able to login despite entering wrong credentials, it will be a failed test case.
+
+Negative Test Case for Payment Gateway: 
+                  Try to make payment without filling mandatory details. If payment is still processed, then it will be a failed test case.
+
+Negative Test Case for Search Functionality:
+                  Search for a non-existent product. If the system shows the product in the search results, it will be a failed test case.
+
+Negative Test Case for User Registration:
+                   Register a user with invalid email address format. If the system allows the user to register, it will be a failed test case.
+
+Negative Test Case for File Upload: 
+                  Try to upload a file with a format that is not supported by the system. If the system allows the file to be uploaded, it will be a failed test case
+
+
+
+
+8.IRTC WEB PAGE
+
+
+Application:
+
+Login Functionality Test
+
+Verify that the login page is displayed correctly.
+Enter valid credentials and verify that the user is able to login successfully.
+Enter invalid credentials and verify that an error message is displayed.
+
+Train Booking Test
+
+Verify that the user is able to search for available trains based on source and destination stations, date and time.
+Verify that the user is able to select a train and class of travel.
+Verify that the user is able to book a ticket and the booking details are displayed correctly.
+Verify that the user is able to cancel a booked ticket and the cancellation details are displayed correctly.
+
+Payment Gateway Test
+
+Verify that the user is able to select a payment option and proceed to payment gateway.
+Verify that the user is able to make a payment successfully.
+Verify that the payment receipt is displayed correctly.
+
+Seat Availability Test
+
+Verify that the user is able to check seat availability for a particular train.
+Verify that the seat availability details are displayed correctly.
+
+PNR Status Test
+
+Verify that the user is able to check the PNR status of a booked ticket.
+Verify that the PNR status details are displayed correctly.
+
+Train Schedule Test
+
+Verify that the user is able to check the schedule of a particular train.
+Verify that the train schedule details are displayed correctly.
+
+Feedback/Testimonial Test
+
+Verify that the user is able to give feedback or write a testimonial.
+Verify that the feedback or testimonial is submitted successfully.
+Verify that the feedback or testimonial is displayed correctly.
+
+
+
+
+
+10.Create 10 test case for amazon Website view in manual testing
+
+  1.Verify that the homepage of the website loads correctly with all the necessary elements like logo, search bar, and navigation menu.
+
+  2.Ensure that the search functionality of the website is working properly and providing accurate results for the searched keywords.
+
+  3.Test the product detail page by checking that all the necessary details about the product are displayed correctly, including product name, price, description, and images.
+
+  4.Ensure that the product images are loading correctly, and users can zoom in/out and view the product from different angles.
+
+  5.Verify that the Add to Cart and Buy Now buttons are working correctly and users can add products to the cart and proceed to checkout.
+
+  6.Test the checkout process by adding products to the cart, selecting the shipping method, entering payment details, and completing the order.
+
+  7.Verify that the user account creation process is working correctly, and users can sign up using their email address and password.
+
+  8.Test the login functionality by entering valid and invalid credentials and verifying that the user can log in successfully.
+
+  9.Verify that the website is responsive and works correctly on different devices like desktop, tablet, and mobile.
+
+  10.Test the website's performance by checking the page load time, response time, and server uptime, and ensure that the website is performing optimally.
+
+

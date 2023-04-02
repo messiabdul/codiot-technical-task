@@ -1,0 +1,190 @@
+SELENIUM TASK
+
+1. WINDOWS HANDLING
+
+
+    WebElement search = a.findElement(By.id("headerSearch"));
+                
+  String w1 = a.getWindowHandle();
+		
+Set<String> w2 = a.getWindowHandles();
+		
+for (String w3 : w2) {
+			
+  if (w3!=w1) {
+				
+	a.switchTo().window(w1);
+				
+}
+			
+	WebElement rate = a.findElement(By.xpath(""));
+			
+	System.out.println();
+}
+
+
+4.FRAME HANDLING
+
+public class FrameExample {
+    public static void main(String[] args) {
+       
+        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        
+        driver.get("https://example.com");
+        
+       
+        driver.switchTo().frame(0);
+        
+        
+        WebElement firstNameInput = driver.findElement(By.id("first-name"));
+        firstNameInput.sendKeys("John");
+        
+       
+        driver.switchTo().defaultContent();
+        
+        // switch to the second frame
+        driver.switchTo().frame("frame2");
+        
+       
+        WebElement lastNameInput = driver.findElement(By.id("last-name"));
+        lastNameInput.sendKeys("Doe");
+        
+        driver.switchTo().defaultContent();
+        
+        // close the browser
+        driver.quit();
+    }
+}
+
+6.SELECTED DROPDOWN
+
+//Locate the dropdown element using its ID, name, XPath or other selector
+WebElement dropdown = driver.findElement(By.id("example-dropdown"));
+
+Select select = new Select(dropdown);
+
+//Select multiple options by value,by index ,by visible text
+select.selectByValue("option1");
+select.selectByValue("option2");
+
+
+select.selectByIndex(2);
+select.selectByIndex(4);
+
+
+select.selectByVisibleText("Option 3");
+select.selectByVisibleText("Option 5");
+
+//Deselect a selected option by value,by index ,by visible text
+select.deselectByValue("option1");
+
+
+select.deselectByIndex(2);
+
+
+select.deselectByVisibleText("Option 3");
+
+//Get all selected options
+List<WebElement> selectedOptions = select.getAllSelectedOptions();
+
+
+
+8. SCREEN SHOT 
+
+ 
+		TakesScreenshot tk = (TakesScreenshot)driver;
+		File sour = tk.getScreenshotAs(OutputType.FILE);
+		File de=new File("C:\\Users\\Abdul\\eclipse-workspace\\Proje\\screensht\\mynthra.png");
+		FileUtils.copyFile(sour, de);
+		
+9.EXCEL SHEET
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTest {
+
+    public static void main(String[] args) throws IOException {
+        
+        // Open Excel file and read data
+
+        File file = new File("path/to/your/excel/file.xlsx");
+        FileInputStream inputStream = new FileInputStream(file);
+        Workbook workbook = new XSSFWorkbook(inputStream);
+        Sheet sheet = workbook.getSheet("Sheet1"); 
+        Row row = sheet.getRow(0);
+        Cell loginCell = row.getCell(0); 
+        Cell passwordCell = row.getCell(1); 
+        String login = loginCell.getStringCellValue();
+        String password = passwordCell.getStringCellValue();
+        workbook.close();
+        inputStream.close();
+
+        
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.yourwebsite.com/login");
+
+        
+        WebElement loginField = driver.findElement(By.name("login"));
+        WebElement passwordField = driver.findElement(By.name("password"));
+        WebElement submitButton = driver.findElement(By.tagName("button"));
+
+        loginField.sendKeys(login);
+        passwordField.sendKeys(password);
+        submitButton.click();
+
+        
+        WebElement successMessage = driver.findElement(By.id("successMessage"));
+        if (successMessage.isDisplayed()) {
+            System.out.println("Login successful!");
+        } else {
+            System.out.println("Login failed.");
+        }
+
+       
+    }
+}
+
+
+10.TEST SCENARIO CRIDIT CARDS
+
+Open the website for the credit card application.
+Navigate to the "Credit Cards" page.
+Verify that there are different types of credit cards available (e.g., rewards, cashback, low-interest, etc.)
+Click on the "Apply Now" button for a specific credit card.
+Fill in the required personal information fields (e.g., name, address, phone number, email address).
+Fill in the required financial information fields (e.g., income, employment status, credit score).
+Select the appropriate credit limit and interest rate.
+Verify that all entered information is correct and matches the user's input.
+Click the "Submit" button to submit the application.
+Verify that a confirmation message appears indicating that the application was submitted successfully.
+
+Additionally, some other scenarios that could be tested are:
+
+Testing the validation messages for invalid inputs in the personal and financial information fields.
+Testing the credit card application process for a user with an existing account vs. a new user.
+Testing the application process for different credit scores and income levels.
+Testing the application process for different credit card types and options (e.g., adding an authorized user, opting for paperless statements, etc.).
+
+
+15. MORE THAN ONE WEB ELIMENT
+
+List<WebElement> elements = driver.findElements(By.tagName("div"));
+for (WebElement element : elements) {
+    System.out.println(element.getText());
+}
+
+
+
